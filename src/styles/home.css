@@ -1,0 +1,64 @@
+.introducao-home{
+    background-image: url('../assets/img/bg-home-top.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt-principal-home{
+    color: yellow;
+    font-size: 2.5em;
+    text-shadow: -4px 4px 0 green;
+    text-align: center;
+}
+
+/*Herói do Penta*/
+.foto-heroipenta{
+    width: 100%;
+}
+
+.heroi-penta .titulo{
+    color: rgb(6, 91, 136);
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.heroi-penta .subtitulo{
+    color: rgb(127, 143, 152);
+    display: inline-block;
+    margin-top: -15px;
+}
+
+.txt-heroipenta{
+    padding-right: 45px;
+    padding-left: 45px;
+}
+
+.numeros-heroipenta div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.numeros-heroipenta div span{
+    color: rgb(255, 94, 79);
+    font-family: 'Dela Gothic One';
+    font-size: 2.5em;
+}
+
+.numeros-heroipenta div strong{
+    text-transform: uppercase;
+}
+
+.partidas-jogadas{
+    text-align: left;
+}
+
+.gols-marcados{
+    text-align: right;
+}
