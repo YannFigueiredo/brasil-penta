@@ -64,3 +64,9 @@ p{
 .btn-verde{
   background-color: green;
 }
+
+@media screen and (min-width: 992px) {
+    .container{
+      padding: 25px;
+    }
+}

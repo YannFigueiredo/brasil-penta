@@ -1,3 +1,4 @@
+/*Introdução*/
 .introducao-home{
     background-image: url('../assets/img/bg-home-top.jpg');
     background-repeat: no-repeat;
@@ -61,4 +62,49 @@
 
 .gols-marcados{
     text-align: right;
+}
+
+@media screen and (min-width: 992px) {
+    /*Introdução*/
+    .introducao-home{
+        align-items: flex-start;
+    }
+    
+    .txt-principal-home{
+        font-size: 3.5em;
+        display: inline-block;
+        width: 70%;
+        text-align: left;
+    }
+
+    /*Herói do penta*/
+    .container-artigo-heroipenta{
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: auto;
+        grid-gap: 5px;
+    }
+
+    .numeros-heroipenta{
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+        margin: auto;
+    }
+
+    .numeros-heroipenta div{
+        text-align: center;
+    }    
+}
+
+@media screen and (min-width: 1200px) {
+    /*Introdução*/
+    .txt-principal-home{
+        font-size: 5em;
+    }
+
+    /*Herói do penta*/
+    .container-artigo-heroipenta{
+        grid-template-columns: 40% 60%;
+    }
 }
