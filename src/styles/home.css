@@ -6,6 +6,7 @@
 
 .menu-header li:nth-child(2) a, .menu-header li:nth-child(3) a, .menu-header li:nth-child(4) a{
     color: rgba(0, 0, 0, .8);
+    font-weight: 400;
 }
 
 /*Introdução*/

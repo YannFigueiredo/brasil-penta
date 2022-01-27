@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 
 export default function Menu(){
-    (function(){
+    /*(function(){
         const btnMenu = document.querySelector('.btn-menu');
         const containerMenu = document.querySelector('menu-header');
     
         btnMenu.addEventListener('click', () => {
             alert('oiii');
         });
-    }());
+    }());*/
 
     return(
         <div>

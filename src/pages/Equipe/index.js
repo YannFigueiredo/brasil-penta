@@ -1,7 +1,7 @@
 export default function Equipe(){
     return(
-        <div>
+        <section>
             
-        </div>
+        </section>
     );
 }

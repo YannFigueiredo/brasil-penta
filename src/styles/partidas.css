@@ -1,0 +1,45 @@
+/*Configuração de ativo do header*/
+.menu-header li:nth-child(2) a{
+    color: black;
+    font-weight: 700;
+}
+
+.menu-header li:nth-child(1) a, .menu-header li:nth-child(3) a, .menu-header li:nth-child(4) a{
+    color: rgba(0, 0, 0, .8);
+    font-weight: 400;
+}
+
+.partidas-copa2002{
+    text-align: center;
+}
+
+.partidas-copa2002 .titulo{
+    color: rgb(6, 91, 136);
+    font-size: 1.5em;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.conteudo-principal-partida{
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.conteudo-secundario-partida{
+    margin-top: -20px;
+}
+
+@media screen and (min-width: 992px) {
+    /*Configuração de ativo do header*/
+    .menu-header li:nth-child(2) a{
+        color: white;
+    }
+    
+    .menu-header li:nth-child(1) a, .menu-header li:nth-child(3) a, .menu-header li:nth-child(4) a{
+        color: rgba(255, 255, 255, .5);
+    }
+
+    .partidas-copa2002 .titulo{
+        font-size: 2em;
+    }
+}
