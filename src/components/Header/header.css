@@ -1,0 +1,53 @@
+.header-principal{
+    background-color: green;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.container-logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 70px;
+}
+
+.logo-txt{
+    color: yellow;
+    font-size: 1.3em;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.logo-txt span{
+    font-weight: 700;
+    font-size: 1.6em;
+    display: block;
+}
+
+.menu-header{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.menu-header li{
+    list-style-type: none;
+}
+
+.menu-header li a{
+    color: white;
+    padding: 8px;
+    box-sizing: border-box;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color .5s;
+}
+
+.menu-header li a:hover{
+    background-color: rgba(255, 255, 255, .3);
+}
