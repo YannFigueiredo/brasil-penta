@@ -1,6 +1,7 @@
 import './header.css';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/img/logo-brasil.png';
+import Menu from '../../components/Menu';
 
 export default function Header(){
     return(
@@ -11,15 +12,7 @@ export default function Header(){
                 </div>
                 <Link className="logo-txt" to={'/'}><span>Brasil</span>Penta</Link>
             </div>
-            <nav>
-                <ul className="menu-header">
-                    <li><Link to={'/'}>Home</Link></li>
-                    <li><Link to={'/partidas'}>Partidas</Link></li>
-                    <li><Link to={'/equipe'}>Equipe</Link></li>
-                    <li><Link to={'/momentos'}>Momentos</Link></li>
-                </ul>
-            </nav>
-            {/*botão menu*/}
+            <Menu/>
         </header>
     );
 }

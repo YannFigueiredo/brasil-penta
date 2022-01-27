@@ -1,3 +1,13 @@
+/*Configuração de ativo do header*/
+.menu-header li:nth-child(1) a{
+    color: black;
+    font-weight: 700;
+}
+
+.menu-header li:nth-child(2) a, .menu-header li:nth-child(3) a, .menu-header li:nth-child(4) a{
+    color: rgba(0, 0, 0, .8);
+}
+
 /*Introdução*/
 .introducao-home{
     background-image: url('../assets/img/bg-home-top.jpg');
@@ -19,6 +29,10 @@
 }
 
 /*Herói do Penta*/
+.heroi-penta{
+    margin-top: 30px;
+}
+
 .foto-heroipenta{
     width: 100%;
 }
@@ -65,6 +79,15 @@
 }
 
 @media screen and (min-width: 992px) {
+    /*Configuração de ativo do header*/
+    .menu-header li:nth-child(1) a{
+        color: white;
+    }
+
+    .menu-header li:nth-child(2) a, .menu-header li:nth-child(3) a, .menu-header li:nth-child(4) a{
+        color: rgba(255, 255, 255, .5);
+    }
+    
     /*Introdução*/
     .introducao-home{
         align-items: flex-start;
