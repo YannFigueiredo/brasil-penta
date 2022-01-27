@@ -4,6 +4,7 @@ import Partidas from './pages/Partidas';
 import Equipe from './pages/Equipe';
 import Momentos from './pages/Momentos';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
 
 const Rotas = () => {
@@ -17,6 +18,7 @@ const Rotas = () => {
                 <Route path='/momentos' element={<Momentos/>}/>
                 <Route path='*' element={<NotFound/>}/>
             </Routes>
+            <Footer/>
         </BrowserRouter>
     );
 }
