@@ -37,6 +37,7 @@ p{
 .titulo{
   font-size: 2em;
   text-transform: uppercase;
+  color: rgb(6, 91, 136);
 }
 
 .subtitulo{
