@@ -57,6 +57,7 @@ p{
   font-weight: 700;
   font-size: 1.2em;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn:hover{

@@ -6,7 +6,7 @@ export default function Home(){
         <div>
             <section className="introducao-home container">
                 <h1 className="txt-principal-home titulo">Seleção pentacampeã</h1>
-                <a className="btn btn-verde btn-assistirfinal">Assista a final</a>
+                <a href="https://www.youtube.com/watch?v=AMKx_v1gF3w" className="btn btn-verde btn-assistirfinal" target="blank">Assista a final</a>
             </section>
             <section className="heroi-penta container">
                 <div className="container-artigo-heroipenta">
