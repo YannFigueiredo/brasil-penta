@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { HeaderContext } from '../../contexts/header_scripts';
 
 export default function Menu(){
-    const [estadoMenu, setEstado] = useState(false);
-    const [paginaAtiva, setAtiva] = useState(null);
+    const {estadoMenu, setEstado, paginaAtiva, setAtiva} = useContext(HeaderContext);
 
     useEffect(() => {
         if(paginaAtiva != null){

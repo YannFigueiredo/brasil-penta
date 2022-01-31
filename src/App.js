@@ -1,11 +1,14 @@
 import Rotas from './routes';
 import './styles/all.css';
+import HeaderProvider from './contexts/header_scripts';
 
 function App() {
   return (
-    <div>
-      <Rotas/>
-    </div>
+    <HeaderProvider>
+      <div>
+        <Rotas/>
+      </div>
+    </HeaderProvider>
   );
 }
 
