@@ -26,7 +26,7 @@ export default function Equipe(){
         {id: 9, nome: 'Rivaldo', camisa: '10', posicao: 'atacante', foto: rivaldo10},
         {id: 10, nome: 'Ronaldinho', camisa: '11', posicao: 'meia', foto: ronaldinho11},
         {id: 11, nome: 'Kleberson', camisa: '15', posicao: 'volante', foto: kleberson15},
-        {id: 12, nome: 'Luiz Felipe Scolari', camisa: '00', posicao: 'técnico', foto: tecfelipao}
+        {id: 12, nome: 'Luiz Felipe Scolari', camisa: '', posicao: 'técnico', foto: tecfelipao}
     ]);
     
     return(
@@ -40,7 +40,7 @@ export default function Equipe(){
                             <img src={jogador.foto}/>
                         </div>
                         <div className="identificacao-jogador">
-                            <h3 className="identificacao">{jogador.camisa} - {jogador.nome}</h3>
+                            <h3 className="identificacao">{jogador.posicao != 'técnico' ? `${jogador.camisa} - ${jogador.nome}` : `${jogador.nome}`}</h3>
                             <p className="posicao">{jogador.posicao}</p>
                         </div>
                     </article>
