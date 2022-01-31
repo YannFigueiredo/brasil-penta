@@ -1,26 +1,52 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 export default function Menu(){
-    /*(function(){
-        const btnMenu = document.querySelector('.btn-menu');
-        const containerMenu = document.querySelector('menu-header');
-    
-        btnMenu.addEventListener('click', () => {
-            alert('oiii');
+    const [estadoMenu, setEstado] = useState(false);
+    const [paginaAtiva, setAtiva] = useState(null);
+
+    useEffect(() => {
+        if(paginaAtiva != null){
+            if(window.outerWidth < 992)
+                toggleMenu();
+            
+            togglePagina();
+        }
+    }, [paginaAtiva]);
+
+    function toggleMenu(){
+        setEstado(!estadoMenu);
+
+        if(estadoMenu){
+            document.querySelector('body').style.overflow = 'auto';
+        }else{
+            document.querySelector('body').style.overflow = 'hidden';
+        }
+    }
+
+    function togglePagina(){
+        let paginas = document.querySelectorAll('.menu-header li');
+
+        paginas.forEach(pagina => {
+            if(pagina.querySelector('a').classList.contains('item-ativo')){
+                pagina.querySelector('a').classList.remove('item-ativo');
+            }
         });
-    }());*/
+
+        document.querySelector(`.menu-header li:nth-child(${paginaAtiva}) a`).classList.add('item-ativo');
+    }
 
     return(
         <div>
             <nav>
-                <ul className="menu-header menu-fechado">
-                    <li><Link to={'/'}>Home</Link></li>
-                    <li><Link to={'/partidas'}>Partidas</Link></li>
-                    <li><Link to={'/equipe'}>Equipe</Link></li>
-                    <li><Link to={'/momentos'}>Momentos</Link></li>
+                <ul className={estadoMenu ? "menu-header" : "menu-header menu-fechado"}>
+                    <li><Link onClick={() => {setAtiva(1)}} to={'/'}>Home</Link></li>
+                    <li><Link onClick={() => {setAtiva(2)}} to={'/partidas'}>Partidas</Link></li>
+                    <li><Link onClick={() => {setAtiva(3)}} to={'/equipe'}>Equipe</Link></li>
+                    <li><Link onClick={() => {setAtiva(4)}} to={'/momentos'}>Momentos</Link></li>
                 </ul>
             </nav>
-            <i className="fas fa-bars btn-menu"></i>
+            <i onClick={toggleMenu} className={estadoMenu ? "fas fa-times btn-menu-aberto" : "fas fa-bars btn-menu"}></i>
         </div>
     );
 }

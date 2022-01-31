@@ -1,14 +1,3 @@
-/*Configuração de ativo do header*/
-.menu-header li:nth-child(1) a{
-    color: black;
-    font-weight: 700;
-}
-
-.menu-header li:nth-child(2) a, .menu-header li:nth-child(3) a, .menu-header li:nth-child(4) a{
-    color: rgba(0, 0, 0, .8);
-    font-weight: 400;
-}
-
 /*Introdução*/
 .introducao-home{
     background-image: url('../assets/img/bg-home-top.jpg');
@@ -79,16 +68,7 @@
     text-align: right;
 }
 
-@media screen and (min-width: 992px) {
-    /*Configuração de ativo do header*/
-    .menu-header li:nth-child(1) a{
-        color: white;
-    }
-
-    .menu-header li:nth-child(2) a, .menu-header li:nth-child(3) a, .menu-header li:nth-child(4) a{
-        color: rgba(255, 255, 255, .5);
-    }
-    
+@media screen and (min-width: 992px) {   
     /*Introdução*/
     .introducao-home{
         align-items: flex-start;
