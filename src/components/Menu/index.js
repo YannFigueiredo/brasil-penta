@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect, useContext } from 'react';
-import { HeaderContext } from '../../contexts/header_scripts';
+import { useEffect, useContext } from 'react';
+import { HeaderContext } from '../../contexts/Header';
 
 export default function Menu(){
     const {estadoMenu, setEstado, paginaAtiva, setAtiva} = useContext(HeaderContext);

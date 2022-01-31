@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/img/logo-brasil.png';
 import Menu from '../../components/Menu';
 import { useContext } from 'react';
-import { HeaderContext } from '../../contexts/header_scripts';
+import { HeaderContext } from '../../contexts/Header';
 
 export default function Header(){
-    const {paginaAtiva, setAtiva} = useContext(HeaderContext);
+    const {setAtiva} = useContext(HeaderContext);
 
     return(
         <header className="header-principal container">

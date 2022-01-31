@@ -1,13 +1,16 @@
 import Rotas from './routes';
 import './styles/all.css';
-import HeaderProvider from './contexts/header_scripts';
+import HeaderProvider from './contexts/Header';
+import ElencoProvider from './contexts/Elenco';
 
 function App() {
   return (
     <HeaderProvider>
-      <div>
-        <Rotas/>
-      </div>
+      <ElencoProvider>
+        <div>
+          <Rotas/>
+        </div>
+      </ElencoProvider>
     </HeaderProvider>
   );
 }
