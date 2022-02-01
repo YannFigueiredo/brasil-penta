@@ -1,0 +1,139 @@
+.jogador-selecionado, .jogador-selecionado .container-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.jogador-selecionado .nome{
+    font-size: 2em;
+    font-family: 'Dela Gothic One', sans-serif;
+    color: yellow;
+}
+
+.jogador-selecionado .estatisticas{
+    margin-top: -25px;
+}
+
+.jogador-selecionado .estatisticas p{
+    color: white;
+}
+
+.jogador-selecionado .estatisticas span{
+    font-weight: 700;
+}
+
+.jogador-selecionado header{
+    background-color: green;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+    margin-bottom: 25px;
+}
+
+.jogador-selecionado .foto{
+    width: 400px;
+    height: 600px;
+}
+
+.jogador-selecionado.foto img{
+    width: 100%;
+    height: 100%;
+}
+
+.jogador-selecionado .informacoes .dados{
+    margin-top: 35px;
+}
+
+.jogador-selecionado .informacoes .dados span{
+    color: green;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8em;
+}
+
+.jogador-selecionado .biografia{
+    margin-top: 25px;
+}
+
+.jogador-selecionado .biografia h2{
+    text-align: left !important;
+}
+
+/*Slides*/
+.slide-jogadores .divisoria{
+    border: 3px solid rgb(6, 91, 136);
+}
+
+.container-jogador-slide{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin-top: 30px;
+}
+
+
+.jogador-slide{
+    cursor: pointer;
+}
+
+.container-jogador-slide .jogador-slide .foto{
+    width: 200px;
+    height: 300px;
+    margin-right: 10px;
+}
+
+.container-jogador-slide .jogador-slide .foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.jogador-slide .posicao{
+    font-size: 0.9em;
+    font-weight: 700;
+    display: inline-block;
+    padding-left: 10px;
+    border-left: 3px solid green;
+    margin-top: -20px;
+}
+
+.controladores-slide{
+    text-align: center;
+}
+
+.controladores-slide .btn-anterior, .controladores-slide .btn-proximo{
+    font-size: 1.8em;
+    color: green;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.controladores-slide .btn-anterior{
+    margin-right: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .jogador-selecionado header{
+        padding-left: 320px;
+    }
+
+    .jogador-selecionado .container-main{
+        flex-direction: row;
+    }
+
+    .jogador-selecionado .foto{
+        width: 250px;
+        height: 400px;
+        margin-top: -150px;
+    }
+
+    .jogador-selecionado .informacoes .dados{
+        margin-top: 0;
+    }
+
+    .jogador-selecionado .biografia{
+        
+    }
+}
