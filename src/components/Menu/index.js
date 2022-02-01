@@ -7,7 +7,7 @@ export default function Menu(){
 
     useEffect(() => {
         if(paginaAtiva != null){
-            if(window.outerWidth < 992)
+            if(window.outerWidth < 992 && estadoMenu)
                 toggleMenu();
             
             togglePagina();

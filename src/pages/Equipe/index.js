@@ -1,9 +1,11 @@
 import '../../styles/equipe.css';
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ElencoContext } from '../../contexts/Elenco';
 
 export default function Equipe(){
-    const { jogadores, setJogadores } = useContext(ElencoContext);    
+    const { jogadores, setJogadores } = useContext(ElencoContext);
+    const navigate = useNavigate();
 
     return(
         <section className="equipe-titular container">
@@ -12,7 +14,7 @@ export default function Equipe(){
             {
                 jogadores.map(jogador => (
                     <article className="jogador" key={jogador.id}>
-                        <div className="foto-jogador">
+                        <div onClick={() => {navigate(`/equipe/${jogador.id}`)}} className="foto-jogador">
                             <img src={jogador.foto}/>
                         </div>
                         <div className="identificacao-jogador">

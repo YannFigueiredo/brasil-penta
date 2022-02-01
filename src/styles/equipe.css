@@ -24,6 +24,7 @@
 
 .foto-jogador{
     height: 300px;
+    cursor: pointer;
 }
 
 .foto-jogador img{

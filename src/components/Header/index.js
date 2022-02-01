@@ -8,6 +8,10 @@ import { HeaderContext } from '../../contexts/Header';
 export default function Header(){
     const {setAtiva} = useContext(HeaderContext);
 
+    /*window.addEventListener('load', () => {
+        alert('oii');
+    });*/
+
     return(
         <header className="header-principal container">
             <div className="container-logo">

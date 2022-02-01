@@ -16,18 +16,18 @@ export const ElencoContext = createContext({});
 
 export default function ElencoProvider({children}){
     const [jogadores, setJogadores] = useState([
-        {id: 1, nome: 'Marcos', camisa: '01', posicao: 'goleiro', foto: marcos01},
-        {id: 2, nome: 'Cafu', camisa: '02', posicao: 'lateral', foto: cafu02},
-        {id: 3, nome: 'Lúcio', camisa: '03', posicao: 'zagueiro', foto: lucio03},
-        {id: 4, nome: 'Roque Júnior', camisa: '04', posicao: 'zagueiro', foto: roque04},
-        {id: 5, nome: 'Edmilson', camisa: '05', posicao: 'zagueiro', foto: edmilson05},
-        {id: 6, nome: 'Roberto Carlos', camisa: '06', posicao: 'lateral', foto: rcarlos06},
-        {id: 7, nome: 'Gilberto Silva', camisa: '08', posicao: 'volante', foto: gilberto08},
-        {id: 8, nome: 'Ronaldo', camisa: '09', posicao: 'atacante', foto: ronaldo09},
-        {id: 9, nome: 'Rivaldo', camisa: '10', posicao: 'atacante', foto: rivaldo10},
-        {id: 10, nome: 'Ronaldinho', camisa: '11', posicao: 'meia', foto: ronaldinho11},
-        {id: 11, nome: 'Kleberson', camisa: '15', posicao: 'volante', foto: kleberson15},
-        {id: 12, nome: 'Luiz Felipe Scolari', camisa: '', posicao: 'técnico', foto: tecfelipao}
+        {id: 1, nome: 'Marcos', camisa: '01', posicao: 'goleiro', foto: marcos01, partidas: '', gols: '', biografia: ''},
+        {id: 2, nome: 'Cafu', camisa: '02', posicao: 'lateral', foto: cafu02, partidas: '', gols: '', biografia: ''},
+        {id: 3, nome: 'Lúcio', camisa: '03', posicao: 'zagueiro', foto: lucio03, partidas: '', gols: '', biografia: ''},
+        {id: 4, nome: 'Roque Júnior', camisa: '04', posicao: 'zagueiro', foto: roque04, partidas: '', gols: '', biografia: ''},
+        {id: 5, nome: 'Edmilson', camisa: '05', posicao: 'zagueiro', foto: edmilson05, partidas: '', gols: '', biografia: ''},
+        {id: 6, nome: 'Roberto Carlos', camisa: '06', posicao: 'lateral', foto: rcarlos06, partidas: '', gols: '', biografia: ''},
+        {id: 7, nome: 'Gilberto Silva', camisa: '08', posicao: 'volante', foto: gilberto08, partidas: '', gols: '', biografia: ''},
+        {id: 8, nome: 'Ronaldo', camisa: '09', posicao: 'atacante', foto: ronaldo09, partidas: '', gols: '', biografia: ''},
+        {id: 9, nome: 'Rivaldo', camisa: '10', posicao: 'atacante', foto: rivaldo10, partidas: '', gols: '', biografia: ''},
+        {id: 10, nome: 'Ronaldinho', camisa: '11', posicao: 'meia', foto: ronaldinho11, partidas: '', gols: '', biografia: ''},
+        {id: 11, nome: 'Kleberson', camisa: '15', posicao: 'volante', foto: kleberson15, partidas: '', gols: '', biografia: ''},
+        {id: 12, nome: 'Luiz Felipe Scolari', camisa: '', posicao: 'técnico', foto: tecfelipao, partidas: '', gols: '', biografia: ''}
     ]);
 
     return(
