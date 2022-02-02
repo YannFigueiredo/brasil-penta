@@ -3,13 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { ElencoContext } from '../../contexts/Elenco';
 import './slide.css';
 
-export default function Slide(props){
+export default function Slide({ id }){
     const { jogadores } = useContext(ElencoContext);
     const navigate = useNavigate();
     const jogadorSlide = useRef(null);
     const dots = useRef(null);
+    var dotAtual = 0;
     var qtdeDots;
-    const { id } = props.id;
     var outrosJogadores = jogadores.filter(item => {
         return item.id !== parseInt(id);
     });
@@ -18,19 +18,17 @@ export default function Slide(props){
         qtdeDots = jogadorSlide.current.scrollWidth/jogadorSlide.current.offsetWidth;
 
         criarDots();
-    }, [])
 
-    const voltarSlide = (e) => {
-        e.preventDefault();
+        definirDotInicial();
 
-        jogadorSlide.current.scrollLeft -= jogadorSlide.outerWidth; 
-    };
-
-    const avancarSlide = (e) => {
-        e.preventDefault();
-
-        jogadorSlide.current.scrollLeft += jogadorSlide.current.offsetWidth;
-    }
+        document.querySelectorAll('.dots div').forEach(dot => {
+            dot.addEventListener('click', function(e){
+                dotAtual = parseInt(e.target.classList[0]);
+                definirDotAtiva();
+                jogadorSlide.current.scrollLeft = e.target.classList[0] * jogadorSlide.current.offsetWidth;
+            });
+        });
+    }, []);
 
     window.addEventListener('resize', () => {
         qtdeDots = jogadorSlide.current.scrollWidth/jogadorSlide.current.offsetWidth;
@@ -38,12 +36,48 @@ export default function Slide(props){
         criarDots();
     });
 
+    const voltarSlide = (e) => {
+        e.preventDefault();
+
+        jogadorSlide.current.scrollLeft -= jogadorSlide.current.offsetWidth; 
+
+        if(dotAtual - 1 >= 0){
+            dotAtual -= 1;
+            definirDotAtiva();
+        }
+    };
+
+    const avancarSlide = (e) => {
+        e.preventDefault();
+
+        jogadorSlide.current.scrollLeft += jogadorSlide.current.offsetWidth;
+
+        if(dotAtual + 1 <= qtdeDots){
+            dotAtual += 1;
+            definirDotAtiva();
+        }
+    }
+
     function criarDots(){
+        dots.current.textContent = '';
+
         for(var i = 0; i < qtdeDots; i++){
             var div = document.createElement('div');
             div.classList.add(i);
             dots.current.appendChild(div);
         }
+    }
+
+    function definitDotInicial(){
+        
+    }
+
+    function definirDotAtiva(){
+        for(var i = 0; i < qtdeDots; i++){
+            document.querySelector(`.dots div:nth-child(${i+1})`).classList.remove('ativo');
+        }
+
+        document.querySelector(`.dots div:nth-child(${dotAtual+1})`).classList.add('ativo');
     }
 
     return(

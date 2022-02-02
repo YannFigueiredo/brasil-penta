@@ -1,4 +1,4 @@
-import { createElement, useContext, useRef, useEffect } from 'react';
+import { useContext } from 'react';
 import { ElencoContext } from '../../contexts/Elenco';
 import { useParams } from 'react-router-dom';
 import '../../styles/jogador.css';
@@ -36,7 +36,7 @@ export default function Jogador(){
                     </div>
                 </div>
             </section>
-            <Slide id={id}/>
+            <Slide id={parseInt(id)}/>
         </div>
     );
 }
