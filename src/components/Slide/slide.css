@@ -1,0 +1,71 @@
+.slide-jogadores .divisoria{
+    border: 3px solid rgb(6, 91, 136);
+}
+
+.container-jogador-slide{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin-top: 30px;
+}
+
+
+.jogador-slide{
+    cursor: pointer;
+}
+
+.container-jogador-slide .jogador-slide .foto{
+    width: 200px;
+    height: 300px;
+    margin-right: 10px;
+}
+
+.container-jogador-slide .jogador-slide .foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.jogador-slide .posicao{
+    font-size: 0.9em;
+    font-weight: 700;
+    display: inline-block;
+    padding-left: 10px;
+    border-left: 3px solid green;
+    margin-top: -20px;
+}
+
+.dots{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.dots div{
+    background-color: rgb(85, 85, 85);;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.dots .ativo{
+    color: green;
+}
+
+.controladores-slide{
+    text-align: center;
+}
+
+.controladores-slide .btn-anterior, .controladores-slide .btn-proximo{
+    font-size: 1.8em;
+    color: green;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.controladores-slide .btn-anterior{
+    margin-right: 20px;
+}
