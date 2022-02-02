@@ -99,6 +99,21 @@
     margin-top: -20px;
 }
 
+.dots{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.dots div{
+    background-color: green;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
 .controladores-slide{
     text-align: center;
 }
