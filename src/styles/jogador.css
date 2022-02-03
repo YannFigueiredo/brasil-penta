@@ -32,8 +32,8 @@
 }
 
 .jogador-selecionado .foto{
-    width: 400px;
-    height: 600px;
+    width: 300px;
+    height: 500px;
 }
 
 .jogador-selecionado.foto img{
@@ -42,7 +42,7 @@
 }
 
 .jogador-selecionado .informacoes .dados{
-    margin-top: 35px;
+    margin-top: -25px;
 }
 
 .jogador-selecionado .informacoes .dados span{
@@ -58,6 +58,17 @@
 
 .jogador-selecionado .biografia h2{
     text-align: left !important;
+}
+
+@media screen and (min-width: 480px) {
+    .jogador-selecionado .foto{
+        width: 400px;
+        height: 600px;
+    }
+
+    .jogador-selecionado .informacoes .dados{
+        margin-top: 35px;
+    }
 }
 
 @media screen and (min-width: 768px) {

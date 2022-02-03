@@ -14,8 +14,8 @@ export default function Home(){
                         <img src={fotoRonaldo} alt="Ronaldo Fenômeno"/>
                     </div>
                     <div className="txt-heroipenta">
-                        <h1 class="titulo">Ronaldo Fenômeno</h1>
-                        <h2 class="subtitulo">O herói do penta</h2>
+                        <h1 className="titulo">Ronaldo Fenômeno</h1>
+                        <h2 className="subtitulo">O herói do penta</h2>
                         <p>Na etapa final, Ronaldo apareceu e garantiu o pentacampeonato para a Seleção Brasileira. Com 22 minutos, o Fenômeno pegou o rebote de Kahn, após o chute de Rivaldo, e abriu o placar. Aos 34 minutos, Kleberson apareceu mais uma vez pela direita, cruzou rasteiro, e Rivaldo fez um lindo corta-luz. Ronaldo finalizou da entrada da área, no cantinho de Oliver Kahn, e deu números finais à partida do pentacampeonato da Seleção.</p>
                     </div>
                 </div>

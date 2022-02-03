@@ -6,7 +6,6 @@
 
 .equipe-titular .titulo{
     text-align: center;
-    font-size: 1.5em;
     display: inline-block;
     margin-bottom: 30px;
 }
@@ -44,10 +43,6 @@
 }
 
 @media screen and (min-width: 768px) {
-    .equipe-titular .titulo{
-        font-size: 2em;
-    }
-
     .container-jogador{
         grid-template-columns: repeat(3, auto);
         grid-gap: 10px;

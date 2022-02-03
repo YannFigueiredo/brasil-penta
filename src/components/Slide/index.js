@@ -24,16 +24,18 @@ export default function Slide({ id }){
         window.addEventListener('resize', () => {
             qtdeDots = Math.ceil(jogadorSlide.current.scrollWidth/jogadorSlide.current.offsetWidth);
 
-            console.log(qtdeDots);
-
             criarDots();
 
             definirDotInicial();
 
             criarEventosDots();
+
+            criarEventoTouch();
         });
 
         criarEventosDots();
+
+        criarEventoTouch();
     }, []);
 
     const voltarSlide = (e) => {
@@ -89,6 +91,12 @@ export default function Slide({ id }){
                 dotAtual = parseInt(e.target.classList[0]);
                 definirDotAtiva();
             });
+        });
+    }
+
+    function criarEventoTouch(){
+        jogadorSlide.current.addEventListener('scroll', function(e){
+            definirDotInicial();
         });
     }
 

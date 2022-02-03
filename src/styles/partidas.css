@@ -3,7 +3,6 @@
 }
 
 .partidas-copa2002 .titulo{
-    font-size: 1.5em;
     display: inline-block;
     margin-bottom: 20px;
 }
@@ -15,10 +14,4 @@
 
 .conteudo-secundario-partida{
     margin-top: -20px;
-}
-
-@media screen and (min-width: 992px) {
-    .partidas-copa2002 .titulo{
-        font-size: 2em;
-    }
 }
