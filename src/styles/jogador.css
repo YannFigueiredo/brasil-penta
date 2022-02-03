@@ -1,8 +1,10 @@
+.jogador-inexistente .titulo{
+    text-align: center;
+}
+
 .jogador-selecionado, .jogador-selecionado .container-main{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .jogador-selecionado .nome{
@@ -53,7 +55,7 @@
 }
 
 .jogador-selecionado .biografia{
-    margin-top: 25px;
+    margin-top: 0px;
 }
 
 .jogador-selecionado .biografia h2{

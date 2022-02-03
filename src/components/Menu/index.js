@@ -10,8 +10,29 @@ export default function Menu(){
             if(window.outerWidth < 992 && estadoMenu)
                 toggleMenu();
             
+            localStorage.setItem('pagina', paginaAtiva);
+            
             togglePagina();
         }
+
+        window.addEventListener('load', (e) => {
+            e.preventDefault();
+
+            switch(window.location.pathname){
+                case '/':
+                    setAtiva(1);
+                    break;
+                case '/partidas':
+                    setAtiva(2);
+                    break;
+                case '/equipe':
+                    setAtiva(3);
+                    break;
+                case '/momentos':
+                    setAtiva(4);
+                    break;
+            }
+        });
     }, [paginaAtiva]);
 
     function toggleMenu(){
