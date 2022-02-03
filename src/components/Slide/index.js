@@ -21,20 +21,20 @@ export default function Slide({ id }){
 
         definirDotInicial();
 
-        document.querySelectorAll('.dots div').forEach(dot => {
-            dot.addEventListener('click', function(e){
-                dotAtual = parseInt(e.target.classList[0]);
-                definirDotAtiva();
-                jogadorSlide.current.scrollLeft = e.target.classList[0] * jogadorSlide.current.offsetWidth;
-            });
+        window.addEventListener('resize', () => {
+            qtdeDots = Math.ceil(jogadorSlide.current.scrollWidth/jogadorSlide.current.offsetWidth);
+
+            console.log(qtdeDots);
+
+            criarDots();
+
+            definirDotInicial();
+
+            criarEventosDots();
         });
+
+        criarEventosDots();
     }, []);
-
-    window.addEventListener('resize', () => {
-        qtdeDots = jogadorSlide.current.scrollWidth/jogadorSlide.current.offsetWidth;
-
-        criarDots();
-    });
 
     const voltarSlide = (e) => {
         e.preventDefault();
@@ -52,7 +52,7 @@ export default function Slide({ id }){
 
         jogadorSlide.current.scrollLeft += jogadorSlide.current.offsetWidth;
 
-        if(dotAtual + 1 <= qtdeDots){
+        if(dotAtual + 1 < qtdeDots){
             dotAtual += 1;
             definirDotAtiva();
         }
@@ -68,8 +68,10 @@ export default function Slide({ id }){
         }
     }
 
-    function definitDotInicial(){
-        
+    function definirDotInicial(){
+        dotAtual = Math.ceil(jogadorSlide.current.scrollLeft/jogadorSlide.current.offsetWidth);
+
+        definirDotAtiva();
     }
 
     function definirDotAtiva(){
@@ -78,6 +80,16 @@ export default function Slide({ id }){
         }
 
         document.querySelector(`.dots div:nth-child(${dotAtual+1})`).classList.add('ativo');
+    }
+
+    function criarEventosDots(){
+        dots.current.querySelectorAll('div').forEach(dot => {
+            dot.addEventListener('click', function(e){
+                jogadorSlide.current.scrollLeft = e.target.classList[0] * jogadorSlide.current.offsetWidth;
+                dotAtual = parseInt(e.target.classList[0]);
+                definirDotAtiva();
+            });
+        });
     }
 
     return(
