@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './footer.css';
+import '../../styles/footer.css';
 import { useContext } from 'react';
 import { HeaderContext } from '../../contexts/Header';
 

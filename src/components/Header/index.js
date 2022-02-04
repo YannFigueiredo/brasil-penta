@@ -1,4 +1,4 @@
-import './header.css';
+import '../../styles/header.css';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/img/logo-brasil.png';
 import Menu from '../../components/Menu';
@@ -7,10 +7,6 @@ import { HeaderContext } from '../../contexts/Header';
 
 export default function Header(){
     const {setAtiva} = useContext(HeaderContext);
-
-    /*window.addEventListener('load', () => {
-        alert('oii');
-    });*/
 
     return(
         <header className="header-principal container">

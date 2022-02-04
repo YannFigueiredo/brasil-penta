@@ -1,7 +1,7 @@
 import { useEffect, useRef, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ElencoContext } from '../../contexts/Elenco';
-import './slide.css';
+import '../../styles/slide.css';
 
 export default function Slide({ id }){
     const { jogadores } = useContext(ElencoContext);
