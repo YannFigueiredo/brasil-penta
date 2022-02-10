@@ -8,6 +8,19 @@ import { HeaderContext } from '../../contexts/Header';
 export default function Header(){
     const {setAtiva} = useContext(HeaderContext);
 
+    window.addEventListener('scroll', function(e){
+        if(window.scrollY > 300){
+            document.querySelector('.header-principal').classList.add('header-scroll');
+            document.querySelector('.logo').classList.add('logo-scroll');
+            document.querySelector('.logo-txt').classList.add('logo-txt-scroll');
+        }else{
+            document.querySelector('.header-principal').classList.remove('header-scroll');
+            document.querySelector('.logo').classList.remove('logo-scroll');
+            document.querySelector('.logo-txt').classList.remove('logo-txt-scroll');
+        }
+
+    });
+
     return(
         <header className="header-principal container">
             <div className="container-logo">
