@@ -24,16 +24,16 @@ Brasil Penta é um projeto de um site responsivo feito em React que lista divers
 ## Layout web
 
 ### Home
-<img src="https://github.com/YannFigueiredo/assets/blob/main/brasil-penta-desktop-home.gif"  alt="Desktop 1 - Home" width="300">
+<img src="https://github.com/YannFigueiredo/assets/blob/main/brasil-penta-desktop-home.gif"  alt="Desktop 1 - Home" width="800">
 
 ### Partidas
-<img src="https://github.com/YannFigueiredo/assets/blob/main/brasil-penta-desktop-partidas.gif"  alt="Desktop 2 - Partidas" width="300">
+<img src="https://github.com/YannFigueiredo/assets/blob/main/brasil-penta-desktop-partidas.gif"  alt="Desktop 2 - Partidas" width="800">
 
 ### Equipe
-<img src="https://github.com/YannFigueiredo/assets/blob/main/brasil-penta-desktop-equipe.gif"  alt="Desktop 3 - Equipe" width="300">
+<img src="https://github.com/YannFigueiredo/assets/blob/main/brasil-penta-desktop-equipe.gif"  alt="Desktop 3 - Equipe" width="800">
 
 ### Momentos
-<img src="https://github.com/YannFigueiredo/assets/blob/main/brasil-penta-desktop-momentos.gif"  alt="Desktop 4 - Momentos" width="300">
+<img src="https://github.com/YannFigueiredo/assets/blob/main/brasil-penta-desktop-momentos.gif"  alt="Desktop 4 - Momentos" width="800">
 
 # Tecnologias utilizadas
 - Linguagens: HTML / CSS / JavaScript
